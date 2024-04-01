@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+yun_dev_database_expiry.access_mod_model,access_mod_model,yun_dev_database_expiry.model_mod_model,base.group_user,1,1,1,1
+yun_dev_database_expiry.access_mod_brand,access_mod_brand,yun_dev_database_expiry.model_mod_brand,base.group_user,1,1,1,1
+yun_dev_database_expiry.access_mod_brand_change,access_mod_brand_change,yun_dev_database_expiry.model_mod_brand_change,base.group_user,1,1,1,1

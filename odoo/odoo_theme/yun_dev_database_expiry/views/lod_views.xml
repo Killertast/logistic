@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="model_module_act_window" model="ir.actions.act_window">
+        <field name="name">Human_model</field>
+        <field name="res_model">mod.model</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="brand_act_window" model="ir.actions.act_window">
+        <field name="name">Human_Name</field>
+        <field name="res_model">mod.brand</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="mod_brand_change_form" model="ir.ui.view">
+        <field name="name">mod.brand.change.form</field>
+        <field name="model">mod.brand.change</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <header>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="brand_id" />
+                        <field name="model_id"
+                            domain="[('brand_id','=', brand_id)]"
+                        />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="chang_name_act_window" model="ir.actions.act_window">
+        <field name="name">Human_Name</field>
+        <field name="res_model">mod.brand.change</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="new_app_menu_id" name="News Module" sequence="-10" />
+    <menuitem id="mode_app_menu_id" parent="new_app_menu_id" name="Model" sequence="-9"
+        action="model_module_act_window" />
+    <menuitem id="brand_app_menu_id" parent="new_app_menu_id" name="brand" sequence="-9"
+        action="brand_act_window" />
+    <menuitem id="change_brand_app_menu_id" parent="new_app_menu_id" name="Change_barnd"
+        sequence="-9" action="chang_name_act_window" />
+
+</odoo>

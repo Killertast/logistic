@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+logistic.access_config_rider,access_config_rider,logistic.model_config_rider,base.group_user,1,1,1,1
+logistic.access_config_village,access_config_village,logistic.model_config_village,base.group_user,1,1,1,1
+logistic.access_config_district,access_config_district,logistic.model_config_district,base.group_user,1,1,1,1
+logistic.access_config_province,access_config_province,logistic.model_config_province,base.group_user,1,1,1,1

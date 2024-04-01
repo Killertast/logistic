@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+    
+        <record id="ir_cron_auto_database_expiry" model="ir.cron">
+          <field name="name">Auto Set Expiry Date Scheduler</field>
+          <field name="model_id" ref="base.model_ir_config_parameter"/>
+          <field name="state">code</field>
+          <field name="code">model.auto_set_date_expiry_database()</field>
+          <field name="interval_number">1</field>
+          <field name="interval_type">days</field>
+          <field name="numbercall">-1</field>
+          <field name="doall" eval="False"/>
+          <field name="active" eval="True"/>
+        </record>
+        
+        <record id="ir_cron_auto_runtrigger_database_expiry" model="ir.cron">
+          <field name="name">Auto Set Expiry Date trigger</field>
+          <field name="model_id" ref="base.model_ir_config_parameter"/>
+          <field name="state">code</field>
+          <field name="code">model._cron_auto_expiry_database()</field>
+          <field name="interval_number">12</field>
+          <field name="interval_type">hours</field>
+          <field name="numbercall">-1</field>
+          <field name="doall" eval="False"/>
+          <field name="active" eval="True"/>
+        </record>
+    
+      </data>
+
+</odoo>
